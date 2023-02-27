@@ -1,0 +1,12 @@
+default: &default
+  adapter: sqlite3
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/dogs-dev.sqlite3
+
+production:
+  <<: *default
+  database: db/dogs-prod.sqlite3
+
